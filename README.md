@@ -86,6 +86,12 @@ instead of email. This can be configured for passport-local but this is double t
 When plugging in Passport-Local Mongoose plugin additional options can be provided to configure
 the hashing algorithm.
 
+    var options = {
+      "usernameField": "email",
+      "saltField": "salty",
+      "maxAttempts": 5      
+    }
+
     User.plugin(passportLocalMongoose, options);
 
 __Main Options__
